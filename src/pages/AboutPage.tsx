@@ -5,6 +5,12 @@ import { staggerContainer, staggerItem } from '@/lib/motion';
 import teamBg from '../assets/team-bg.jpg';
 import teamMember from '../assets/team-member.jpg';
 import visionBg from '../assets/vision-bg.jpg';
+import sachinImg from "@/assets/sachin.jpg";
+import vedanginiImg from "@/assets/vedangini.jpg";
+
+// TODO: Add separate image imports for team members when images are available
+// import sachinImage from '../assets/sachin-wagh.jpg';
+// import vedanginiImage from '../assets/vedangini-wagh.jpg';
 
 const AboutPage = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -37,7 +43,7 @@ const AboutPage = () => {
             transition={{ delay: 0.4 }}
             className="heading-hero"
           >
-            Our <span className="text-primary">Story</span>
+            <span className="text-white">Our</span> <span className="text-primary">Story</span>
           </motion.h1>
         </div>
       </section>
@@ -77,17 +83,49 @@ const AboutPage = () => {
                 evoke emotion and enhance the way you live and work.
               </motion.p>
             </div>
-            <motion.div
-              variants={staggerItem}
-              className="relative aspect-[4/5] rounded-lg overflow-hidden"
-            >
-              <img
-                src={teamBg}
-                alt="OneCoreX Design"
-                className=" h-full"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-            </motion.div>
+            <div className="flex flex-col items-center space-y-10">
+  {/* Sachin */}
+  <div className="flex flex-col items-center text-center">
+  <div className="bg-[#f8f5ef] p-6 rounded-[28px] shadow-lg overflow-hidden">
+    <img
+      src={sachinImg}
+      alt="Sachin Wagh"
+      className="w-[300px] h-[380px] object-cover rounded-[20px]"
+    />
+  </div>
+
+  <h3 className="mt-6 text-2xl font-medium text-secondary">
+    Sachin Wagh
+  </h3>
+
+  <p className="mt-1 text-base text-primary">
+    Founder & Managing Director
+  </p>
+</div>
+
+
+  {/* Vedangini */}
+  <div className="flex flex-col items-center text-center">
+  <div className="bg-[#f8f5ef] p-6 rounded-[28px] shadow-lg overflow-hidden">
+    <img
+      src={vedanginiImg}
+      alt="Vedangini Wagh"
+      className="w-[300px] h-[380px] object-cover rounded-[20px]"
+    />
+  </div>
+
+  <h3 className="mt-6 text-2xl font-medium text-secondary">
+    Vedangini Wagh
+  </h3>
+
+  <p className="mt-1 text-base text-primary">
+    Co-Founder & Creative Director
+  </p>
+</div>
+
+</div>
+
+
           </motion.div>
         </div>
       </section>
@@ -187,7 +225,7 @@ const AboutPage = () => {
               are visually refined, structurally robust, and delivered with
               exceptional professionalism.
             </p>
-            <blockquote className="border-l-2 border-primary pl-8 text-left">
+            <blockquote className="border-l-2 border-primary pl-8 text-left mb-16">
               <p className="font-display text-2xl italic">
                 "Two perspectives. One shared purpose -{' '}
                 <span className="text-primary">
@@ -196,6 +234,69 @@ const AboutPage = () => {
               </p>
             </blockquote>
           </motion.div>
+
+          {/* Team Members */}
+<motion.div
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto"
+>
+  {/* Sachin Wagh */}
+  <motion.div
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.2 }}
+    className="flex flex-col items-center text-center"
+  >
+    <div className="bg-card p-4 rounded-2xl shadow-lg">
+      <div className="w-[280px] h-[360px] flex items-center justify-center">
+        <img
+          src={teamMember}
+          alt="Sachin Wagh"
+          className="max-w-full max-h-full object-contain rounded-xl"
+        />
+      </div>
+    </div>
+
+    <h3 className="heading-card mt-6 text-secondary">
+      Sachin Wagh
+    </h3>
+
+    <p className="text-primary font-body text-sm uppercase tracking-wider mt-1">
+      Founder & Managing Director
+    </p>
+  </motion.div>
+
+  {/* Vedangini Wagh */}
+  <motion.div
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.4 }}
+    className="flex flex-col items-center text-center"
+  >
+    <div className="bg-card p-4 rounded-2xl shadow-lg">
+      <div className="w-[280px] h-[360px] flex items-center justify-center">
+        <img
+          src={teamMember}
+          alt="Vedangini Wagh"
+          className="max-w-full max-h-full object-contain rounded-xl"
+        />
+      </div>
+    </div>
+
+    <h3 className="heading-card mt-6 text-secondary">
+      Vedangini Wagh
+    </h3>
+
+    <p className="text-primary font-body text-sm uppercase tracking-wider mt-1">
+      Co-Founder & Creative Director
+    </p>
+  </motion.div>
+</motion.div>
+
         </div>
       </section>
     </Layout>

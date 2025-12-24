@@ -30,45 +30,33 @@ export const HeroSection = () => {
           alt="Luxury Interior Design"
           className="w-full h-full object-cover scale-110"
         />
-        {/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="absolute inset-0 bg-background/30" />
+         {/* Soft translucent shade */}
+         <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="absolute inset-0 bg-background/5" />
+
+
       </motion.div>
 
       {/* Content */}
       <motion.div
-        className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6"
-        style={{ opacity }}
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-1"
-        >
-          <span className="label-elegant mt-1">Interior Design Excellence</span>
-        </motion.div>
+  className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6"
+  style={{ opacity }}
+>
+  <span className="label-elegant mt-1 text-white/80">
+    Interior Design Excellence
+  </span>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="heading-hero text-foreground mb-3"
-        >
-          <span className="block">Design.</span>
-          <span className="block text-primary">Deliver.</span>
-          <span className="block">Dazzle.</span>
-        </motion.h1>
+  <motion.h1 className="heading-hero text-white mb-3">
+    <span className="block">Design.</span>
+    <span className="block text-primary">Deliver.</span>
+    <span className="block">Dazzle.</span>
+  </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="body-large max-w-2xl text-foreground/80 mb-10"
-        >
-          Crafting spaces that inspire. We blend creativity with engineering
-          precision to create meaningful experiences.
-        </motion.p>
+  <motion.p className="body-large max-w-2xl text-white/90 mb-10">
+    Crafting spaces that inspire. We blend creativity with engineering
+    precision to create meaningful experiences.
+  </motion.p>
+
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

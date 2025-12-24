@@ -78,7 +78,7 @@ const WhyUsPage = () => {
             transition={{ delay: 0.4 }}
             className="heading-hero"
           >
-            Why <span className="text-primary">Choose Us</span>
+            <span className="text-white">Why</span> <span className="text-primary">Choose Us</span>
           </motion.h1>
         </div>
       </section>

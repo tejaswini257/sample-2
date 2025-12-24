@@ -68,7 +68,9 @@ export const Navbar = () => {
                     className={`font-body text-sm tracking-wider transition-colors duration-300 ${
                       location.pathname === link.path
                         ? 'text-primary'
-                        : 'text-foreground/80 hover:text-foreground'
+                        : isScrolled
+                        ? 'text-foreground/80 hover:text-foreground'
+                        : 'text-white/90 hover:text-white'
                     }`}
                   >
                     {link.name}
@@ -90,7 +92,11 @@ export const Navbar = () => {
             <div className="hidden lg:flex items-center gap-6">
               <a
                 href="tel:+971525315971"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                className={`flex items-center gap-2 text-sm transition-colors ${
+                  isScrolled
+                    ? 'text-muted-foreground hover:text-primary'
+                    : 'text-white/90 hover:text-white'
+                }`}
               >
                 <Phone size={16} />
                 <span className="font-body">+971 52 531 5971</span>
@@ -103,7 +109,9 @@ export const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-foreground"
+              className={`lg:hidden p-2 transition-colors ${
+                isScrolled ? 'text-foreground' : 'text-white'
+              }`}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

@@ -82,7 +82,7 @@ const ContactPage = () => {
             transition={{ delay: 0.4 }}
             className="heading-hero"
           >
-            <span className="text-primary">Contact</span> Us
+            <span className="text-primary">Contact</span> <span className="text-white">Us</span>
           </motion.h1>
         </div>
       </section>
@@ -218,7 +218,7 @@ const ContactPage = () => {
                       onChange={handleChange}
                       placeholder="John Doe"
                       required
-                      className="bg-secondary/50 border-border focus:border-primary"
+                      className="bg-white border-border focus:border-primary"
                     />
                   </div>
                   <div>
@@ -236,7 +236,7 @@ const ContactPage = () => {
                       onChange={handleChange}
                       placeholder="john@example.com"
                       required
-                      className="bg-secondary/50 border-border focus:border-primary"
+                      className="bg-white border-border focus:border-primary"
                     />
                   </div>
                 </div>
@@ -255,7 +255,7 @@ const ContactPage = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+971 50 000 0000"
-                      className="bg-secondary/50 border-border focus:border-primary"
+                      className="bg-white border-border focus:border-primary"
                     />
                   </div>
                   <div>
@@ -272,7 +272,7 @@ const ContactPage = () => {
                       onChange={handleChange}
                       placeholder="Project Inquiry"
                       required
-                      className="bg-secondary/50 border-border focus:border-primary"
+                      className="bg-white border-border focus:border-primary"
                     />
                   </div>
                 </div>
@@ -292,7 +292,7 @@ const ContactPage = () => {
                     placeholder="Tell us about your project..."
                     rows={6}
                     required
-                    className="bg-secondary/50 border-border focus:border-primary resize-none"
+                    className="bg-white border-border focus:border-primary resize-none"
                   />
                 </div>
 
