@@ -85,43 +85,63 @@ const AboutPage = () => {
             </div>
             <div className="flex flex-col items-center space-y-10">
   {/* Sachin */}
-  <div className="flex flex-col items-center text-center">
-  <div className="bg-[#f8f5ef] p-6 rounded-[28px] shadow-lg overflow-hidden">
-    <img
+  <motion.div 
+    className="flex flex-col items-center text-center group cursor-pointer"
+    whileHover={{ scale: 1.05 }}
+    transition={{ duration: 0.3 }}
+  >
+  <div className="p-0 rounded-[28px] overflow-hidden border-0">
+    <motion.img
       src={sachinImg}
       alt="Sachin Wagh"
-      className="w-[300px] h-[380px] object-cover rounded-[20px]"
+      className="w-[300px] h-[380px] object-cover rounded-[20px] transition-all duration-300 group-hover:brightness-110 group-hover:shadow-xl"
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
     />
   </div>
 
-  <h3 className="mt-6 text-2xl font-medium text-secondary">
+  <motion.h3 
+    className="mt-6 text-2xl font-medium text-secondary transition-colors duration-300 group-hover:text-primary"
+  >
     Sachin Wagh
-  </h3>
+  </motion.h3>
 
-  <p className="mt-1 text-base text-primary">
+  <motion.p 
+    className="mt-1 text-base text-primary transition-colors duration-300 group-hover:text-primary/80"
+  >
     Founder & Managing Director
-  </p>
-</div>
+  </motion.p>
+</motion.div>
 
 
   {/* Vedangini */}
-  <div className="flex flex-col items-center text-center">
-  <div className="bg-[#f8f5ef] p-6 rounded-[28px] shadow-lg overflow-hidden">
-    <img
+  <motion.div 
+    className="flex flex-col items-center text-center group cursor-pointer"
+    whileHover={{ scale: 1.05 }}
+    transition={{ duration: 0.3 }}
+  >
+  <div className="p-0 rounded-[28px] overflow-hidden border-0">
+    <motion.img
       src={vedanginiImg}
       alt="Vedangini Wagh"
-      className="w-[300px] h-[380px] object-cover rounded-[20px]"
+      className="w-[300px] h-[380px] object-cover rounded-[20px] transition-all duration-300 group-hover:brightness-110 group-hover:shadow-xl"
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
     />
   </div>
 
-  <h3 className="mt-6 text-2xl font-medium text-secondary">
+  <motion.h3 
+    className="mt-6 text-2xl font-medium text-secondary transition-colors duration-300 group-hover:text-primary"
+  >
     Vedangini Wagh
-  </h3>
+  </motion.h3>
 
-  <p className="mt-1 text-base text-primary">
+  <motion.p 
+    className="mt-1 text-base text-primary transition-colors duration-300 group-hover:text-primary/80"
+  >
     Co-Founder & Creative Director
-  </p>
-</div>
+  </motion.p>
+</motion.div>
 
 </div>
 
@@ -139,11 +159,11 @@ const AboutPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="glass-card p-10"
+              className="glass-card p-10 text-foreground"
             >
-              <span className="label-elegant block mb-4">Our Vision</span>
+              <span className="label-elegant block mb-4 text-primary/90">Our Vision</span>
               <div className="gold-line mb-6" />
-              <p className="body-elegant">
+              <p className="body-elegant text-foreground/70">
                 To create spaces through craftsmanship, creativity, and precision -
                 transforming every space into a reflection of excellence, luxury and
                 timeless design elevating lifestyle and inspire success across every
@@ -155,11 +175,11 @@ const AboutPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="glass-card p-10"
+              className="glass-card p-10 text-foreground"
             >
-              <span className="label-elegant block mb-4">Our Mission</span>
+              <span className="label-elegant block mb-4 text-primary/90">Our Mission</span>
               <div className="gold-line mb-6" />
-              <p className="body-elegant">
+              <p className="body-elegant text-foreground/70">
                 We aim to create meaningful and memorable environments by integrating
                 innovative design, technical expertise, and uncompromising
                 craftsmanship—ensuring every space we deliver elevates the user
@@ -248,25 +268,32 @@ const AboutPage = () => {
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
     transition={{ delay: 0.2 }}
-    className="flex flex-col items-center text-center"
+    className="flex flex-col items-center text-center group cursor-pointer"
+    whileHover={{ scale: 1.05 }}
   >
-    <div className="bg-card p-4 rounded-2xl shadow-lg">
+    <div className="p-0 rounded-2xl border-0">
       <div className="w-[280px] h-[360px] flex items-center justify-center">
-        <img
+        <motion.img
           src={teamMember}
           alt="Sachin Wagh"
-          className="max-w-full max-h-full object-contain rounded-xl"
+          className="max-w-full max-h-full object-contain rounded-xl transition-all duration-300 group-hover:brightness-110 group-hover:shadow-xl"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
         />
       </div>
     </div>
 
-    <h3 className="heading-card mt-6 text-secondary">
+    <motion.h3 
+      className="heading-card mt-6 text-secondary transition-colors duration-300 group-hover:text-primary"
+    >
       Sachin Wagh
-    </h3>
+    </motion.h3>
 
-    <p className="text-primary font-body text-sm uppercase tracking-wider mt-1">
+    <motion.p 
+      className="text-primary font-body text-sm uppercase tracking-wider mt-1 transition-colors duration-300 group-hover:text-primary/80"
+    >
       Founder & Managing Director
-    </p>
+    </motion.p>
   </motion.div>
 
   {/* Vedangini Wagh */}
@@ -275,25 +302,32 @@ const AboutPage = () => {
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
     transition={{ delay: 0.4 }}
-    className="flex flex-col items-center text-center"
+    className="flex flex-col items-center text-center group cursor-pointer"
+    whileHover={{ scale: 1.05 }}
   >
-    <div className="bg-card p-4 rounded-2xl shadow-lg">
+    <div className="p-0 rounded-2xl border-0">
       <div className="w-[280px] h-[360px] flex items-center justify-center">
-        <img
+        <motion.img
           src={teamMember}
           alt="Vedangini Wagh"
-          className="max-w-full max-h-full object-contain rounded-xl"
+          className="max-w-full max-h-full object-contain rounded-xl transition-all duration-300 group-hover:brightness-110 group-hover:shadow-xl"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
         />
       </div>
     </div>
 
-    <h3 className="heading-card mt-6 text-secondary">
+    <motion.h3 
+      className="heading-card mt-6 text-secondary transition-colors duration-300 group-hover:text-primary"
+    >
       Vedangini Wagh
-    </h3>
+    </motion.h3>
 
-    <p className="text-primary font-body text-sm uppercase tracking-wider mt-1">
+    <motion.p 
+      className="text-primary font-body text-sm uppercase tracking-wider mt-1 transition-colors duration-300 group-hover:text-primary/80"
+    >
       Co-Founder & Creative Director
-    </p>
+    </motion.p>
   </motion.div>
 </motion.div>
 

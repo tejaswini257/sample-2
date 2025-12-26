@@ -161,18 +161,18 @@ const ServicesPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="glass-card-hover p-8"
+                className="glass-card-hover p-8 text-foreground"
               >
                 <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="heading-card mb-4">{service.title}</h3>
-                <p className="body-elegant text-sm mb-6">{service.description}</p>
+                <h3 className="heading-card mb-4 text-foreground">{service.title}</h3>
+                <p className="body-elegant text-sm mb-6 text-primary">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li
                       key={idx}
-                      className="flex items-center gap-2 text-sm text-muted-foreground"
+                      className="flex items-center gap-2 text-sm text-primary"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                       {feature}
@@ -204,7 +204,7 @@ const ServicesPage = () => {
               transition={{ delay: 0.2 }}
               className="heading-section mb-4"
             >
-              Project <span className="text-primary">Journey</span>
+              <span className="text-white">Project</span> <span className="text-primary">Journey</span>
             </motion.h2>
             <motion.div
               initial={{ opacity: 0 }}
@@ -234,8 +234,8 @@ const ServicesPage = () => {
                 <div className="text-5xl font-display text-primary/30 mb-4">
                   {phase.step}
                 </div>
-                <h4 className="font-display text-xl mb-2">{phase.title}</h4>
-                <p className="text-sm text-muted-foreground">{phase.desc}</p>
+                <h4 className="font-display text-xl mb-2 text-white">{phase.title}</h4>
+                <p className="text-sm text-primary">{phase.desc}</p>
               </motion.div>
             ))}
           </div>

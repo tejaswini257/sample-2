@@ -16,7 +16,7 @@ const buttonVariants = cva(
         ghost: "text-foreground hover:bg-secondary hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         hero: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-gold hover:shadow-glow transition-all duration-500 text-base tracking-wider",
-        "hero-outline": "border-2 border-primary/50 bg-transparent text-foreground hover:bg-primary/10 hover:border-primary transition-all duration-500 text-base tracking-wider",
+        "hero-outline": "border-2 border-primary/50 bg-transparent text-white hover:bg-primary/10 hover:border-primary transition-all duration-500 text-base tracking-wider",
         elegant: "bg-transparent border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500",
         minimal: "bg-transparent text-muted-foreground hover:text-primary transition-colors duration-300",
         gold: "bg-gradient-gold text-primary-foreground hover:opacity-90 shadow-gold transition-all duration-500",

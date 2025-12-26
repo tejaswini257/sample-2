@@ -5,9 +5,10 @@ import { staggerContainer, staggerItem } from '@/lib/motion';
 import portfolio1 from '../assets/portfolio-1.jpg';
 import portfolio2 from '../assets/portfolio-2.jpg';
 import visionBg from '../assets/vision-bg.jpg';
-import teamBg from '../assets/team-bg.jpg';
 import servicesBg from '../assets/services-bg.jpg';
 import contactBg from '../assets/contact-bg.jpg';
+import fasion_img from  '../assets/fasion_img.jpg'
+
 
 const categories = [
   'All',
@@ -50,7 +51,7 @@ const projects = [
     id: 4,
     title: 'Boutique Fashion Store',
     category: 'Retail',
-    image: teamBg,
+    image: fasion_img,
     description: 'Elegant retail space for luxury fashion brand.',
     area: '2,800 sq.ft',
     location: 'Dubai Mall',
@@ -191,19 +192,19 @@ const PortfolioPage = () => {
                   />
                 </motion.div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
 
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                  <span className="label-elegant block mb-2">
+                  <span className="label-elegant block mb-2 text-white/80">
                     {project.category}
                   </span>
-                  <h3 className="heading-card mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="heading-card mb-2 text-white group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm text-white/90 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {project.description}
                   </p>
-                  <div className="flex gap-4 text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex gap-4 text-xs text-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span>{project.area}</span>
                     <span>•</span>
                     <span>{project.location}</span>

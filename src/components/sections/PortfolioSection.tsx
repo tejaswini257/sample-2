@@ -51,7 +51,7 @@ export const PortfolioSection = () => {
               Our Portfolio
             </motion.span>
             <motion.h2 variants={staggerItem} className="heading-section">
-              Featured <span className="text-primary">Projects</span>
+              <span className="text-white">Featured</span> <span className="text-primary">Projects</span>
             </motion.h2>
             <motion.div variants={staggerItem} className="gold-line-lg mt-6" />
           </div>
@@ -95,7 +95,7 @@ export const PortfolioSection = () => {
               </motion.div>
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
 
               {/* Content */}
               <div className="absolute inset-0 p-6 flex flex-col justify-end">
@@ -106,11 +106,11 @@ export const PortfolioSection = () => {
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  <span className="label-elegant block mb-2">{project.category}</span>
-                  <h3 className="heading-card mb-2 group-hover:text-primary transition-colors">
+                  <span className="label-elegant block mb-2 text-white/80">{project.category}</span>
+                  <h3 className="heading-card mb-2 text-white group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {project.description}
                   </p>
                 </motion.div>

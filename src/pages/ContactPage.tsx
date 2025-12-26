@@ -199,7 +199,7 @@ const ContactPage = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="glass-card p-8 md:p-10"
+              className="glass-card p-8 md:p-10 hover:border-primary hover:border-2 transition-all duration-500"
             >
               <h3 className="heading-card mb-6">Send us a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">

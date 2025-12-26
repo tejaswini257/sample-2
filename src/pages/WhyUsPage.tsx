@@ -126,7 +126,7 @@ const WhyUsPage = () => {
               How We're Different
             </motion.span>
             <motion.h2 variants={staggerItem} className="heading-section mb-4">
-              Our <span className="text-primary">Differentiators</span>
+              <span className="text-white">Our</span> <span className="text-primary">Differentiators</span>
             </motion.h2>
             <motion.div variants={staggerItem} className="gold-line mx-auto" />
           </motion.div>
@@ -140,13 +140,13 @@ const WhyUsPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="glass-card-hover p-8 text-center"
+                className="glass-card-hover p-8 text-center text-foreground"
               >
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
                   <item.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="heading-card mb-4">{item.title}</h3>
-                <p className="body-elegant text-sm">{item.description}</p>
+                <h3 className="heading-card mb-4 text-primary">{item.title}</h3>
+                <p className="body-elegant text-sm text-primary/90">{item.description}</p>
               </motion.div>
             ))}
           </div>

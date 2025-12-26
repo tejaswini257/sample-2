@@ -67,14 +67,14 @@ export const AboutSection = () => {
             ].map((stat, index) => (
               <motion.div
                 key={index}
-                className="glass-card-hover p-8 text-center"
+                className="glass-card-hover p-8 text-center text-foreground"
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3 }}
               >
                 <span className="heading-display text-primary block mb-2">
                   {stat.number}
                 </span>
-                <span className="text-sm uppercase tracking-wider text-muted-foreground">
+                <span className="text-sm uppercase tracking-wider text-foreground/80">
                   {stat.label}
                 </span>
               </motion.div>

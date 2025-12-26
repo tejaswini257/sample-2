@@ -165,7 +165,7 @@
   
   /* Glass Card */
   .glass-card {
-    @apply bg-card/60 backdrop-blur-xl border border-border/50 rounded-lg;
+    @apply bg-primary/20 backdrop-blur-xl border border-primary/40 rounded-lg;
     box-shadow: var(--shadow-md);
   }
   
@@ -174,8 +174,9 @@
   }
   
   .glass-card-hover:hover {
-    @apply bg-card/80 border-primary/30;
+    @apply bg-primary/30 border-primary border-2;
     box-shadow: var(--shadow-gold);
+    transform: translateY(-5px);
   }
   
   /* Gold Accent Line */
