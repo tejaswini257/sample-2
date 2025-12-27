@@ -161,9 +161,9 @@ const AboutPage = () => {
               transition={{ duration: 0.6 }}
               className="glass-card p-10 text-foreground"
             >
-              <span className="label-elegant block mb-4 text-primary/90">Our Vision</span>
+              <span className="label-elegant block mb-4 text-[#E3C9A6]">Our Vision</span>
               <div className="gold-line mb-6" />
-              <p className="body-elegant text-foreground/70">
+              <p className="body-elegant text-[#c3a884]">
                 To create spaces through craftsmanship, creativity, and precision -
                 transforming every space into a reflection of excellence, luxury and
                 timeless design elevating lifestyle and inspire success across every
@@ -177,9 +177,9 @@ const AboutPage = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="glass-card p-10 text-foreground"
             >
-              <span className="label-elegant block mb-4 text-primary/90">Our Mission</span>
+              <span className="label-elegant block mb-4 text-[#E3C9A6]">Our Mission</span>
               <div className="gold-line mb-6" />
-              <p className="body-elegant text-foreground/70">
+              <p className="body-elegant text-[#c3a884]">
                 We aim to create meaningful and memorable environments by integrating
                 innovative design, technical expertise, and uncompromising
                 craftsmanship—ensuring every space we deliver elevates the user
