@@ -81,15 +81,15 @@ export const ServicesSection = () => {
               variants={staggerItem}
               whileHover={{ y: -10, scale: 1.02 }}
               transition={{ duration: 0.4 }}
-              className="glass-card-hover p-8 group text-foreground"
+              className="card-new-hover p-8 group"
             >
               <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                 <service.icon className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="heading-card mb-4 text-foreground group-hover:text-primary transition-colors">
+              <h3 className="heading-card mb-4 text-black">
                 {service.title}
               </h3>
-              <p className="body-elegant text-sm text-foreground/90">{service.description}</p>
+              <p className="body-elegant text-sm text-gray-600">{service.description}</p>
             </motion.div>
           ))}
         </motion.div>

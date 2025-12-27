@@ -161,18 +161,18 @@ const ServicesPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="glass-card-hover p-8 text-foreground"
+                className="card-new-hover p-8"
               >
                 <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="heading-card mb-4 text-foreground">{service.title}</h3>
-                <p className="body-elegant text-sm mb-6 text-primary">{service.description}</p>
+                <h3 className="heading-card mb-4 text-black">{service.title}</h3>
+                <p className="body-elegant text-sm mb-6 text-gray-600">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li
                       key={idx}
-                      className="flex items-center gap-2 text-sm text-primary"
+                      className="flex items-center gap-2 text-sm text-gray-600"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                       {feature}

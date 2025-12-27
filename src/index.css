@@ -153,10 +153,23 @@
   
   .body-large {
     @apply font-body text-lg md:text-xl font-light leading-relaxed;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .body-large:hover {
+    text-shadow: 0 0 10px hsla(35, 32%, 55%, 0.5), 0 0 15px hsla(35, 32%, 60%, 0.4), 0 0 20px hsla(35, 32%, 65%, 0.3);
   }
   
   .body-elegant {
     @apply font-body text-base md:text-lg font-light leading-relaxed text-muted-foreground;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .body-elegant:hover {
+    text-shadow: 0 0 8px hsla(35, 32%, 55%, 0.4), 0 0 12px hsla(35, 32%, 60%, 0.3);
+    color: hsl(var(--muted-foreground));
   }
   
   .label-elegant {
@@ -177,6 +190,107 @@
     @apply bg-primary/30 border-primary border-2;
     box-shadow: var(--shadow-gold);
     transform: translateY(-5px);
+  }
+
+  /* New Card Style - Cream background with inset golden border */
+  .card-new {
+    @apply bg-background rounded-lg relative overflow-hidden;
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(
+      135deg,
+      hsl(var(--background)) 0%,
+      hsl(var(--background)) 40%,
+      hsl(35, 32%, 95%) 50%,
+      hsl(var(--background)) 60%,
+      hsl(var(--background)) 100%
+    );
+  }
+  
+  .card-new > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .card-new::before {
+    content: '';
+    @apply absolute inset-2 border border-primary rounded-lg pointer-events-none z-10;
+  }
+  
+  /* Golden shine effect in background */
+  .card-new::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      ellipse at center,
+      hsla(35, 32%, 75%, 0.35) 0%,
+      hsla(35, 32%, 70%, 0.25) 20%,
+      hsla(35, 32%, 65%, 0.15) 40%,
+      transparent 70%
+    );
+    transform: rotate(45deg);
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .card-new-hover {
+    @apply card-new transition-all duration-500;
+  }
+  
+  .card-new-hover:hover {
+    box-shadow: var(--shadow-gold);
+    transform: translateY(-5px);
+  }
+  
+  .card-new-hover:hover::before {
+    @apply border-primary border-2;
+  }
+  
+  .card-new-hover:hover::after {
+    background: radial-gradient(
+      ellipse at center,
+      hsla(35, 32%, 75%, 0.45) 0%,
+      hsla(35, 32%, 70%, 0.35) 20%,
+      hsla(35, 32%, 65%, 0.2) 40%,
+      transparent 70%
+    );
+  }
+  
+  /* Shine effect for cards */
+  .card-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 70%
+    );
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
   }
   
   /* Gold Accent Line */
@@ -261,6 +375,27 @@
   
   .mask-gradient-t {
     mask-image: linear-gradient(to top, black 0%, black 70%, transparent 100%);
+  }
+  
+  /* Text shine effect for body text */
+  .text-shine {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .text-shine:hover {
+    text-shadow: 0 0 10px hsla(35, 32%, 55%, 0.5), 0 0 15px hsla(35, 32%, 60%, 0.4), 0 0 20px hsla(35, 32%, 65%, 0.3);
+  }
+  
+  /* Shine effect for gray text in paragraphs */
+  p.text-gray-600,
+  .text-gray-600 {
+    transition: all 0.3s ease;
+  }
+  
+  p.text-gray-600:hover,
+  .text-gray-600:hover {
+    text-shadow: 0 0 10px hsla(35, 32%, 55%, 0.5), 0 0 15px hsla(35, 32%, 60%, 0.4), 0 0 20px hsla(35, 32%, 65%, 0.3);
   }
 }
 

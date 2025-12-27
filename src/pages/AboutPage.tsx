@@ -5,7 +5,7 @@ import { staggerContainer, staggerItem } from '@/lib/motion';
 import teamBg from '../assets/team-bg.jpg';
 import teamMember from '../assets/team-member.jpg';
 import visionBg from '../assets/vision-bg.jpg';
-import sachinImg from "@/assets/sachin.jpg";
+import sachinImg from "@/assets/sachin.jpg";      
 import vedanginiImg from "@/assets/vedangini.jpg";
 
 // TODO: Add separate image imports for team members when images are available
@@ -90,7 +90,7 @@ const AboutPage = () => {
     whileHover={{ scale: 1.05 }}
     transition={{ duration: 0.3 }}
   >
-  <div className="p-0 rounded-[28px] overflow-hidden border-0">
+  <div className="p-3 rounded-[28px] overflow-hidden border-2 border-primary">
     <motion.img
       src={sachinImg}
       alt="Sachin Wagh"
@@ -120,7 +120,7 @@ const AboutPage = () => {
     whileHover={{ scale: 1.05 }}
     transition={{ duration: 0.3 }}
   >
-  <div className="p-0 rounded-[28px] overflow-hidden border-0">
+  <div className="p-3 rounded-[28px] overflow-hidden border-2 border-primary">
     <motion.img
       src={vedanginiImg}
       alt="Vedangini Wagh"
@@ -159,11 +159,11 @@ const AboutPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="glass-card p-10 text-foreground"
+              className="card-new-hover p-10 card-shine"
             >
-              <span className="label-elegant block mb-4 text-[#E3C9A6]">Our Vision</span>
+              <span className="label-elegant block mb-4 text-primary">Our Vision</span>
               <div className="gold-line mb-6" />
-              <p className="body-elegant text-[#c3a884]">
+              <p className="body-elegant text-gray-600">
                 To create spaces through craftsmanship, creativity, and precision -
                 transforming every space into a reflection of excellence, luxury and
                 timeless design elevating lifestyle and inspire success across every
@@ -175,11 +175,11 @@ const AboutPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="glass-card p-10 text-foreground"
+              className="card-new-hover p-10 card-shine"
             >
-              <span className="label-elegant block mb-4 text-[#E3C9A6]">Our Mission</span>
+              <span className="label-elegant block mb-4 text-primary">Our Mission</span>
               <div className="gold-line mb-6" />
-              <p className="body-elegant text-[#c3a884]">
+              <p className="body-elegant text-gray-600">
                 We aim to create meaningful and memorable environments by integrating
                 innovative design, technical expertise, and uncompromising
                 craftsmanship—ensuring every space we deliver elevates the user
@@ -271,7 +271,7 @@ const AboutPage = () => {
     className="flex flex-col items-center text-center group cursor-pointer"
     whileHover={{ scale: 1.05 }}
   >
-    <div className="p-0 rounded-2xl border-0">
+    <div className="p-3 rounded-2xl border-2 border-primary">
       <div className="w-[280px] h-[360px] flex items-center justify-center">
         <motion.img
           src={teamMember}
@@ -305,7 +305,7 @@ const AboutPage = () => {
     className="flex flex-col items-center text-center group cursor-pointer"
     whileHover={{ scale: 1.05 }}
   >
-    <div className="p-0 rounded-2xl border-0">
+    <div className="p-3 rounded-2xl border-2 border-primary">
       <div className="w-[280px] h-[360px] flex items-center justify-center">
         <motion.img
           src={teamMember}

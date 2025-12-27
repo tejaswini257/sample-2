@@ -38,9 +38,11 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-charcoal border-t border-border">
+    <footer className="bg-charcoal border-t border-border relative overflow-hidden">
+      {/* Overlay to hide any background patterns */}
+      <div className="absolute inset-0 bg-charcoal z-0" />
       {/* Main Footer */}
-      <div className="container-luxury section-padding">
+      <div className="container-luxury section-padding relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-1">
@@ -143,7 +145,7 @@ export const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-border">
+      <div className="border-t border-border relative z-10">
         <div className="container-luxury py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">

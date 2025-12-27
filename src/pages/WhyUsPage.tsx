@@ -140,13 +140,13 @@ const WhyUsPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="glass-card-hover p-8 text-center text-foreground"
+                className="card-new-hover p-8 text-center"
               >
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
                   <item.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="heading-card mb-4 text-primary">{item.title}</h3>
-                <p className="body-elegant text-sm text-primary/90">{item.description}</p>
+                <h3 className="heading-card mb-4 text-black">{item.title}</h3>
+                <p className="body-elegant text-sm text-gray-600">{item.description}</p>
               </motion.div>
             ))}
           </div>

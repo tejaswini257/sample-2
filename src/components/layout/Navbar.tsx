@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logo from '../../assets/logo.png';
-import blue_ from '../../assets/blue_.jpeg'
+import new_logo from '../../assets/new_logo.png'
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -49,13 +49,14 @@ export const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
               <motion.img
-  src={isScrolled ? blue_ : logo}
-  alt="OneCoreX"
-  className="h-12 md:h-14 w-auto object-contain transition-all duration-300"
-  whileHover={{ scale: 1.05 }}
-  transition={{ duration: 0.3 }}
-/>
-
+                src={logo}
+                alt="OneCoreX"
+                className={`h-12 md:h-14 w-auto transition-all duration-500 ${
+                  isScrolled ? 'brightness-75 contrast-125 drop-shadow-md' : ''
+                }`}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              />
             </Link>
 
             {/* Desktop Navigation */}
