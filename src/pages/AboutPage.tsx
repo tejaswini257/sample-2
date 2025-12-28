@@ -2,8 +2,6 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { staggerContainer, staggerItem } from '@/lib/motion';
-import teamBg from '../assets/team-bg.jpg';
-import teamMember from '../assets/team-member.jpg';
 import visionBg from '../assets/vision-bg.jpg';
 import sachinImg from "@/assets/sachin.jpg";      
 import vedanginiImg from "@/assets/vedangini.jpg";
@@ -272,14 +270,14 @@ const AboutPage = () => {
     whileHover={{ scale: 1.05 }}
   >
     <div className="p-3 rounded-2xl border-2 border-primary">
-      <div className="w-[280px] h-[360px] flex items-center justify-center">
+      <div className="w-[280px] h-[360px] overflow-hidden rounded-xl">
         <motion.img
-          src={teamMember}
-          alt="Sachin Wagh"
-          className="max-w-full max-h-full object-contain rounded-xl transition-all duration-300 group-hover:brightness-110 group-hover:shadow-xl"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
-        />
+  src={sachinImg}
+  alt="Sachin Wagh"
+  className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-110 group-hover:shadow-xl"
+  whileHover={{ scale: 1.05 }}
+  transition={{ duration: 0.3 }}
+/>
       </div>
     </div>
 
@@ -306,14 +304,15 @@ const AboutPage = () => {
     whileHover={{ scale: 1.05 }}
   >
     <div className="p-3 rounded-2xl border-2 border-primary">
-      <div className="w-[280px] h-[360px] flex items-center justify-center">
+      <div className="w-[280px] h-[360px] rounded-xl overflow-hidden">
         <motion.img
-          src={teamMember}
-          alt="Vedangini Wagh"
-          className="max-w-full max-h-full object-contain rounded-xl transition-all duration-300 group-hover:brightness-110 group-hover:shadow-xl"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
-        />
+  src={vedanginiImg}
+  alt="Vedangini Wagh"
+  className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-110 group-hover:shadow-xl"
+  whileHover={{ scale: 1.05 }}
+  transition={{ duration: 0.3 }}
+/>
+
       </div>
     </div>
 
